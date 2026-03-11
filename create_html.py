@@ -18,10 +18,10 @@ def scan_audio_files():
             for wav_file in folder_path.glob("*.wav"):
                 # Try to extract English phrase from filename
                 filename = wav_file.stem
-                
+                print("before", filename)
                 # Clean up filename for display
                 display_name = filename.replace('tailo_', '').replace('bonus_', '').replace('_', ' ').title()
-                
+                print("after", filename)
                 all_files.append({
                     'version': version_name,
                     'filename': wav_file.name,
